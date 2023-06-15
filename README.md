@@ -4,4 +4,13 @@ Hello, this project is the result of doing exercises in the Selenium-Java Automa
 
 It consists, a person registers on the portal in to the uTest page
 
-The design model is POM
+This project was built with:
+
+- Selenium
+- Java
+- Serenity BDD
+- Gherkin
+- Gradle
+- POM
+
+🦄
