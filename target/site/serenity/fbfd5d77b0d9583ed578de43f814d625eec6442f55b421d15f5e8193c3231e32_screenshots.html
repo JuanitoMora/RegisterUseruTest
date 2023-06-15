@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">U Test</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="06f30df296872c576fa0a3a051f02e8ac9d6a34b7432ba644d8d5a6a32f1e326.html">Registro De Usuario Nuevo</a></span>
+                > <span class="truncate-60"><a
+                    href="fbfd5d77b0d9583ed578de43f814d625eec6442f55b421d15f5e8193c3231e32.html">Creacion correcta de nueva cuenta </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 14-06-2023 17:45</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Registro De Usuario Nuevo </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como usuario de Utest<br />
+Quiero crear un nuevo registro<br />
+Para acceder como usuario
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5b6459503c122b40fe949c3a83f5f3e5e08071fae8a80bcad4ef6c0e0d4ef0dc.html">New Register
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Creacion correcta de nueva cuenta
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f3f8209d622d29e44e285976b0e421868abd507881c5ec3686499a374cd9eb1c.png" title=" Given un usuario en la pagina de inicio" width="1366"/>
+                <img src="f3f8209d622d29e44e285976b0e421868abd507881c5ec3686499a374cd9eb1c.png" title=" bender opens the Home" width="1366"/>
+                <img src="f3f8209d622d29e44e285976b0e421868abd507881c5ec3686499a374cd9eb1c.png" title=" Given un usuario en la pagina de inicio (completed)" width="1366"/>
+                <img src="a68249cc965616894749d39a084ca1cdd25a8819ce1c818d8c2a9ec463c032e8.png" title=" When el usuario crea una nueva cuenta" width="1366"/>
+                <img src="a68249cc965616894749d39a084ca1cdd25a8819ce1c818d8c2a9ec463c032e8.png" title=" Bender register user" width="1366"/>
+                <img src="a68249cc965616894749d39a084ca1cdd25a8819ce1c818d8c2a9ec463c032e8.png" title=" bender clicks on Button Register" width="1366"/>
+                <img src="cc70ab91114299f8b856c67a21552faaefd1f8763a4a48c51dd8c8da4038101e.png" title=" bender enters 'Juanito' into First Name" width="1366"/>
+                <img src="69e4a4f6b570baf1134cf096f6b208ae0581c6ceb65695da7385851ddbc4e747.png" title=" bender enters 'Juanito' into First Name (completed)" width="1366"/>
+                <img src="69e4a4f6b570baf1134cf096f6b208ae0581c6ceb65695da7385851ddbc4e747.png" title=" bender enters 'Polombia' into Last Name" width="1366"/>
+                <img src="423362d9768d277e78d739a4477cec9031447571765ed0c370e5139bd9bd20bc.png" title=" bender enters 'Polombia' into Last Name (completed)" width="1366"/>
+                <img src="423362d9768d277e78d739a4477cec9031447571765ed0c370e5139bd9bd20bc.png" title=" bender enters 'JP@hifi.com' into email" width="1366"/>
+                <img src="c3edbab5a2404483884b9dd9fdc694cd00c6e3f26338ceb111df68ed38f9b7c7.png" title=" bender enters 'JP@hifi.com' into email (completed)" width="1366"/>
+                <img src="c3edbab5a2404483884b9dd9fdc694cd00c6e3f26338ceb111df68ed38f9b7c7.png" title=" bender enters 'November' into month" width="1366"/>
+                <img src="4d88826b27fdcfe6bae5cd828db793a7e3ff5359b45e728792fa794cc7839791.png" title=" bender enters 'November' into month (completed)" width="1366"/>
+                <img src="4d88826b27fdcfe6bae5cd828db793a7e3ff5359b45e728792fa794cc7839791.png" title=" bender enters '15' into day" width="1366"/>
+                <img src="e53565b3da05dc97bbb5736e9ad21538ac0d482dc9ea07ff25d731accc7b5de7.png" title=" bender enters '15' into day (completed)" width="1366"/>
+                <img src="e53565b3da05dc97bbb5736e9ad21538ac0d482dc9ea07ff25d731accc7b5de7.png" title=" bender enters '1984' into year" width="1366"/>
+                <img src="1d9d3e20f45c8470e7fb13146c7b7f4e2dca2310f28a2d1d7d888c026adafd0b.png" title=" bender enters '1984' into year (completed)" width="1366"/>
+                <img src="1d9d3e20f45c8470e7fb13146c7b7f4e2dca2310f28a2d1d7d888c026adafd0b.png" title=" bender clicks on button next location" width="1366"/>
+                <img src="f5c6bef98dbc008db50ddc04469096963d5cddf15998e04e88c28572ab7f8aa1.png" title=" bender clicks on button next location (completed)" width="1366"/>
+                <img src="f5c6bef98dbc008db50ddc04469096963d5cddf15998e04e88c28572ab7f8aa1.png" title=" bender clicks on button next devices" width="1366"/>
+                <img src="cc05adf95be0c8e2c430687f267dd958ce7167be760aaf3d27a57c2008b5a0ee.png" title=" bender clicks on button next devices (completed)" width="1366"/>
+                <img src="cc05adf95be0c8e2c430687f267dd958ce7167be760aaf3d27a57c2008b5a0ee.png" title=" bender clicks on Computer" width="1366"/>
+                <img src="0efe21a1ee21b7879ea8b559f764a9d2d7ca249e1dd3466083bf8982ccc21bf5.png" title=" bender clicks on Computer (completed)" width="1366"/>
+                <img src="0efe21a1ee21b7879ea8b559f764a9d2d7ca249e1dd3466083bf8982ccc21bf5.png" title=" bender clicks on OS" width="1366"/>
+                <img src="476a357ba859d7354fe0491060f004afb25f3d8cd879cf7044af54301cb89c69.png" title=" bender clicks on OS (completed)" width="1366"/>
+                <img src="476a357ba859d7354fe0491060f004afb25f3d8cd879cf7044af54301cb89c69.png" title=" bender clicks on Version" width="1366"/>
+                <img src="c79567fce725905e990765574ca68f7de102d8a5a8ae89d0cd9b948bacdb653a.png" title=" bender clicks on Version (completed)" width="1366"/>
+                <img src="c79567fce725905e990765574ca68f7de102d8a5a8ae89d0cd9b948bacdb653a.png" title=" bender clicks on Version OS" width="1366"/>
+                <img src="ea5b098644b3e4435634e38e8ddff10807b8f410104bcc944828cd09cdb59de0.png" title=" bender clicks on Version OS (completed)" width="1366"/>
+                <img src="ea5b098644b3e4435634e38e8ddff10807b8f410104bcc944828cd09cdb59de0.png" title=" bender clicks on Version" width="1366"/>
+                <img src="1513c3b186dbf88a5e368bc425c187f856832992aa59ca522586ce3b5fa70c09.png" title=" bender clicks on Version (completed)" width="1366"/>
+                <img src="1513c3b186dbf88a5e368bc425c187f856832992aa59ca522586ce3b5fa70c09.png" title=" bender clicks on Version Language" width="1366"/>
+                <img src="f77bcf624875d8f7bb256fb4d960561b4faf228f6218478f150348f2734d4591.png" title=" bender clicks on Version Language (completed)" width="1366"/>
+                <img src="f77bcf624875d8f7bb256fb4d960561b4faf228f6218478f150348f2734d4591.png" title=" bender clicks on Button Last Step" width="1366"/>
+                <img src="24066288459299c1f90a4ffa08deda2a1f1586fe4f52819a99addc0c5664e4cb.png" title=" bender clicks on Button Last Step (completed)" width="1366"/>
+                <img src="24066288459299c1f90a4ffa08deda2a1f1586fe4f52819a99addc0c5664e4cb.png" title=" bender enters 'Pol0mb_1a*/' into Password" width="1366"/>
+                <img src="5fe23d4091e049db0ede1c2f209ad729ceacbbf0bbca07575b707b679f5d2049.png" title=" bender enters 'Pol0mb_1a*/' into Password (completed)" width="1366"/>
+                <img src="5fe23d4091e049db0ede1c2f209ad729ceacbbf0bbca07575b707b679f5d2049.png" title=" bender enters 'Pol0mb_1a*/' into Confirm Password" width="1366"/>
+                <img src="290660ad8141c1e3bae82ee5a76157096f440a99817c6f34b44e60a47c28b270.png" title=" bender enters 'Pol0mb_1a*/' into Confirm Password (completed)" width="1366"/>
+                <img src="290660ad8141c1e3bae82ee5a76157096f440a99817c6f34b44e60a47c28b270.png" title=" bender clicks on Check Terms" width="1366"/>
+                <img src="fbb343a7f9fa3484535048e416af0125bd90f3357f31f71306594b38457744a9.png" title=" bender clicks on Check Terms (completed)" width="1366"/>
+                <img src="fbb343a7f9fa3484535048e416af0125bd90f3357f31f71306594b38457744a9.png" title=" bender clicks on Check Privacy" width="1366"/>
+                <img src="4f3bdfc23ba2195bc9e2ac74286a27803507e65e6da1a2605594c8a68d72961c.png" title=" bender clicks on Check Privacy (completed)" width="1366"/>
+                <img src="4f3bdfc23ba2195bc9e2ac74286a27803507e65e6da1a2605594c8a68d72961c.png" title=" bender clicks on Button Complete Setup" width="1366"/>
+                <img src="dcfe461d1feb29f23f29d58e72f8b7cdb18901b5c95ecb8a4ce2ace997f85123.png" title=" bender clicks on Button Complete Setup (completed)" width="1366"/>
+                <img src="dcfe461d1feb29f23f29d58e72f8b7cdb18901b5c95ecb8a4ce2ace997f85123.png" title=" Bender register user (completed)" width="1366"/>
+                <img src="9e11c9402bc53447e9077ff4cec77765f9b1c071e97c1a1278f6c6a6d8dee8b1.png" title=" When el usuario crea una nueva cuenta (completed)" width="1366"/>
+                <img src="3b9cebfab55efec0288ab9deb6b946562879203308e6bf203fb90f020ff879c3.png" title=" Then el usuario ve su username: <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.22</span>
+</div>
+</body>
+</html>
